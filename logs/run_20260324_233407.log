@@ -1,0 +1,7 @@
+2026-03-24 23:34:07,846 | INFO     | thermal | Logger initialised — writing to C:\Users\hp\Desktop\FIP\logs\run_20260324_233407.log
+2026-03-24 23:34:07,848 | INFO     | thermal.main | Found 4 image(s) in C:\Users\hp\Desktop\FIP\data\samples
+2026-03-24 23:34:07,915 | INFO     | thermal.preprocess | Preprocessed 4 / 4 images
+2026-03-24 23:34:07,963 | INFO     | thermal.colormap | Colormap 'JET' applied to 4 images
+2026-03-24 23:34:15,131 | INFO     | thermal.features | Feature matrix: shape=(4, 102)  unique_labels=['medium']
+2026-03-24 23:34:15,131 | WARNING  | thermal.main | Only one class found (['medium']). Skipping classification — add more labelled data.
+2026-03-24 23:34:15,133 | INFO     | thermal.main | Pipeline complete (visualisation only).

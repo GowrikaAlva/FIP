@@ -1,0 +1,22 @@
+2026-03-25 00:05:21,214 | INFO     | thermal | Logger initialised — writing to C:\Users\hp\Desktop\FIP\logs\run_20260325_000521.log
+2026-03-25 00:05:21,232 | INFO     | thermal.main | Found 8 image(s) in C:\Users\hp\Desktop\FIP\data\samples
+2026-03-25 00:05:21,287 | INFO     | thermal.preprocess | Preprocessed 8 / 8 images
+2026-03-25 00:05:21,337 | INFO     | thermal.colormap | Colormap 'JET' applied to 8 images
+2026-03-25 00:05:27,262 | INFO     | thermal.features | Feature matrix: shape=(8, 102)  unique_labels=['high', 'low', 'medium']
+2026-03-25 00:05:27,276 | INFO     | thermal.model | Built RandomForestClassifier (n_estimators=100)
+2026-03-25 00:05:27,277 | INFO     | thermal.model | Training on 4 samples, testing on 4 samples …
+2026-03-25 00:05:27,574 | INFO     | thermal.model | Training complete.
+2026-03-25 00:05:27,593 | INFO     | thermal.model | Accuracy=0.2500  Precision=0.0625  Recall=0.2500  F1=0.1000
+2026-03-25 00:05:27,593 | INFO     | thermal.model | 
+              precision    recall  f1-score   support
+
+        high       0.00      0.00      0.00         2
+         low       0.00      0.00      0.00         1
+      medium       0.25      1.00      0.40         1
+
+    accuracy                           0.25         4
+   macro avg       0.08      0.33      0.13         4
+weighted avg       0.06      0.25      0.10         4
+
+2026-03-25 00:05:27,631 | INFO     | thermal.model | Model saved-> C:\Users\hp\Desktop\FIP\models\model_rf.pkl
+2026-03-25 00:05:28,327 | INFO     | thermal.main | Pipeline complete.  Outputs in: C:\Users\hp\Desktop\FIP

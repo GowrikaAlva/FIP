@@ -1,0 +1,5 @@
+2026-03-25 00:00:44,913 | INFO     | thermal | Logger initialised — writing to C:\Users\hp\Desktop\FIP\logs\run_20260325_000044.log
+2026-03-25 00:00:44,915 | INFO     | thermal.main | Found 8 image(s) in C:\Users\hp\Desktop\FIP\data\samples
+2026-03-25 00:00:44,950 | INFO     | thermal.preprocess | Preprocessed 8 / 8 images
+2026-03-25 00:00:44,991 | INFO     | thermal.colormap | Colormap 'JET' applied to 8 images
+2026-03-25 00:00:50,148 | INFO     | thermal.features | Feature matrix: shape=(8, 102)  unique_labels=['high', 'low', 'medium']
