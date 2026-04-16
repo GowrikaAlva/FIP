@@ -1,0 +1,36 @@
+2026-04-14 22:33:47,216 | INFO     | thermal | Logger initialised — writing to C:\Users\hp\Desktop\FIP\logs\run_20260414_223347.log
+2026-04-14 22:33:47,216 | INFO     | thermal.main | Found 67 image(s) in C:\Users\hp\Desktop\FIP\data\samples
+2026-04-14 22:33:47,477 | INFO     | thermal.preprocess | Preprocessed 67 / 67 images
+2026-04-14 22:33:47,642 | INFO     | thermal.main | Augmentation enabled — expanding dataset …
+2026-04-14 22:33:47,693 | INFO     | thermal.main | Dataset size after augmentation: 536 records
+2026-04-14 22:33:49,104 | INFO     | thermal.colormap | Colormap 'JET' applied to 536 images
+2026-04-14 22:34:01,014 | INFO     | thermal.features | Feature matrix: shape=(536, 214)  unique_labels=['high', 'low', 'medium']
+2026-04-14 22:34:01,014 | INFO     | thermal.main | Feature vector length: 214  |  Feature names sample: ['hist_R_bin00', 'hist_R_bin01', 'hist_R_bin02', 'hist_R_bin03', 'hist_R_bin04'] …
+2026-04-14 22:34:01,015 | INFO     | thermal.main | Running 5-fold stratified cross-validation …
+2026-04-14 22:34:01,015 | INFO     | thermal.model | Built SVC (kernel=rbf, C=1.0)
+2026-04-14 22:34:05,392 | INFO     | thermal.model | CV (5-fold) weighted-F1: 0.7319 ± 0.0270
+2026-04-14 22:34:05,394 | INFO     | thermal.main | Hyperparameter tuning enabled — running RandomizedSearchCV …
+2026-04-14 22:34:05,394 | INFO     | thermal.model | Built SVC (kernel=rbf, C=1.0)
+2026-04-14 22:34:10,979 | INFO     | thermal.model | Best CV F1:     0.8826
+2026-04-14 22:34:10,979 | INFO     | thermal.model | Best params:    {'model__kernel': 'rbf', 'model__gamma': 0.01, 'model__C': 100}
+2026-04-14 22:34:10,981 | INFO     | thermal.main | Tuning complete. Best pipeline: Pipeline(steps=[('scaler', StandardScaler()),
+                ('model',
+                 SVC(C=100, gamma=0.01, probability=True, random_state=42))])
+2026-04-14 22:34:10,996 | INFO     | thermal.model | Model saved-> C:\Users\hp\Desktop\FIP\models\model_svm_tuned.pkl
+2026-04-14 22:34:11,002 | INFO     | thermal.model | Built SVC (kernel=rbf, C=1.0)
+2026-04-14 22:34:11,002 | INFO     | thermal.model | Training on 321 samples, testing on 215 samples …
+2026-04-14 22:34:11,055 | INFO     | thermal.model | Training complete.
+2026-04-14 22:34:11,073 | INFO     | thermal.model | Accuracy=0.7302  Precision=0.7552  Recall=0.7302  F1=0.7355
+2026-04-14 22:34:11,075 | INFO     | thermal.model | 
+              precision    recall  f1-score   support
+
+        high       0.62      0.77      0.69        77
+         low       0.95      0.73      0.83        71
+      medium       0.71      0.69      0.70        67
+
+    accuracy                           0.73       215
+   macro avg       0.76      0.73      0.74       215
+weighted avg       0.76      0.73      0.74       215
+
+2026-04-14 22:34:11,080 | INFO     | thermal.model | Model saved-> C:\Users\hp\Desktop\FIP\models\model_svm.pkl
+2026-04-14 22:34:11,569 | INFO     | thermal.main | Pipeline complete.  Outputs in: C:\Users\hp\Desktop\FIP

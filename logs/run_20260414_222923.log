@@ -1,0 +1,28 @@
+2026-04-14 22:29:23,504 | INFO     | thermal | Logger initialised — writing to C:\Users\hp\Desktop\FIP\logs\run_20260414_222923.log
+2026-04-14 22:29:23,510 | INFO     | thermal.main | Found 67 image(s) in C:\Users\hp\Desktop\FIP\data\samples
+2026-04-14 22:29:23,829 | INFO     | thermal.preprocess | Preprocessed 67 / 67 images
+2026-04-14 22:29:24,001 | INFO     | thermal.main | Augmentation disabled (pass --augment to enable).
+2026-04-14 22:29:24,179 | INFO     | thermal.colormap | Colormap 'JET' applied to 67 images
+2026-04-14 22:29:30,855 | INFO     | thermal.features | Feature matrix: shape=(67, 214)  unique_labels=['high', 'low', 'medium']
+2026-04-14 22:29:30,866 | INFO     | thermal.main | Feature vector length: 214  |  Feature names sample: ['hist_R_bin00', 'hist_R_bin01', 'hist_R_bin02', 'hist_R_bin03', 'hist_R_bin04'] …
+2026-04-14 22:29:30,868 | INFO     | thermal.main | Running 5-fold stratified cross-validation …
+2026-04-14 22:29:30,868 | INFO     | thermal.model | Built RandomForestClassifier (n_estimators=100)
+2026-04-14 22:29:35,895 | INFO     | thermal.model | CV (5-fold) weighted-F1: 0.5881 ± 0.0608
+2026-04-14 22:29:35,898 | INFO     | thermal.main | Hyperparameter tuning disabled (pass --tune to enable).
+2026-04-14 22:29:35,899 | INFO     | thermal.model | Built RandomForestClassifier (n_estimators=100)
+2026-04-14 22:29:35,899 | INFO     | thermal.model | Training on 40 samples, testing on 27 samples …
+2026-04-14 22:29:36,126 | INFO     | thermal.model | Training complete.
+2026-04-14 22:29:36,132 | INFO     | thermal.model | Accuracy=0.3333  Precision=0.5442  Recall=0.3333  F1=0.3124
+2026-04-14 22:29:36,132 | INFO     | thermal.model | 
+              precision    recall  f1-score   support
+
+        high       0.38      0.50      0.43        10
+         low       1.00      0.11      0.20         9
+      medium       0.23      0.38      0.29         8
+
+    accuracy                           0.33        27
+   macro avg       0.54      0.33      0.31        27
+weighted avg       0.54      0.33      0.31        27
+
+2026-04-14 22:29:36,173 | INFO     | thermal.model | Model saved-> C:\Users\hp\Desktop\FIP\models\model_rf.pkl
+2026-04-14 22:29:36,654 | INFO     | thermal.main | Pipeline complete.  Outputs in: C:\Users\hp\Desktop\FIP
